@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script src="https://www.webglearth.com/v2/api.js"></script>
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+      margin: 0;
+      overflow-y: hidden;
+      background-image: url("galaxia.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    #earth_div {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    #pic {
+    height: 50px;
+    position: absolute !important;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+    #text {
+    text-align: center;
+    position: absolute;
+    left: 4%;
+    top: 10%; 
+    height: 200px;
+    width: 300px;
+    margin: 1px solid;
+    border: 1px solid #ffffff;
+    background-color: aliceblue;
+    overflow: hidden;
+    }
+  </style>
+  
+  <title>Exibição da ISS no WebGL Earth</title>
+  <meta name="description" content="Este é um exemplo básico de exibição da Estação Espacial Internacional (ISS) em um mapa 3D usando a API do WebGL Earth.">
+</head>
+<body onload="initialize()">
+  <img src="pic.png" id="pic">
+  <div id="earth_div"></div>
+  <div id="text">
+
+    <div class="Formulario">
+
+        <ul class="Form">
+
+            <li class="Info">
+                <p><b>Informações ISS</b></p>
+            </li>
+
+            <li class="Latitude">
+                <p><b>Latitude</b>: <span id="lat"></span></p>
+            </li>
+
+            <li class="Longitude">
+                <p><b>Longitude</b>: <span id="lon"></span></p>
+            </li>
+
+            <li class="Velocidade">
+                <p><b>Velocidade</b>: <span id="vel"></span></p>
+            </li>
+
+            <li class="Altura">
+                <p><b>Altura</b>: <span id="alt"></span></p>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
